@@ -1,0 +1,334 @@
+Copy<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UNBS Petroleum Laboratory Feedback, Industry Needs & Collaboration Input</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7fb;
+      margin: 0;
+      padding: 20px;
+      color: #222; 
+    }
+    .container {
+      max-width: 850px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+    h1, h2 {
+      color: #003366;
+    }
+    p.desc {
+      color: #555;
+      margin-bottom: 25px;
+    }
+    .question {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+    .option label {
+      font-weight: normal;
+      margin-bottom: 6px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+    textarea {
+      min-height: 90px;
+      resize: vertical;
+    }
+    .hidden {
+      display: none;
+    }
+    button {
+      background: #003366;
+      color: #fff;
+      border: none;
+      padding: 12px 18px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 15px;
+    }
+    button:hover {
+      background: #00509e;
+    }
+    .section {
+      margin-top: 30px;
+      padding-top: 10px;
+      border-top: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>UNBS Petroleum Laboratory Feedback, Industry Needs & Collaboration Input Form</h1>
+    <p class="desc">
+      This short form helps UNBS Petroleum Laboratory improve current services, understand industry needs,
+      and plan future expansion in testing capacity, collaboration, and service delivery.
+    </p>
+
+    <form>
+      <div class="section">
+        <h2>Section 1: General Information</h2>
+
+        <div class="question">
+          <label for="orgName">1. Name of Organization</label>
+          <input type="text" id="orgName" name="orgName">
+        </div>
+
+        <div class="question">
+          <label for="contactPerson">2. Contact Person & Title</label>
+          <input type="text" id="contactPerson" name="contactPerson">
+        </div>
+
+        <div class="question">
+          <label for="contactDetails">3. Email & Phone</label>
+          <input type="text" id="contactDetails" name="contactDetails">
+        </div>
+
+        <div class="question">
+          <label for="segment">4. Segment of Operation</label>
+          <select id="segment" name="segment">
+            <option>Upstream</option>
+            <option>Midstream</option>
+            <option>Downstream</option>
+            <option>Integrated</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label for="category">5. Your Category</label>
+          <select id="category" name="category">
+            <option>Oil Marketing Company</option>
+            <option>Fuel Station / Operator</option>
+            <option>Transport Company</option>
+            <option>Manufacturer / Industrial User</option>
+            <option>Government Institution</option>
+            <option>Regulator</option>
+            <option>Importer / Exporter</option>
+            <option>Academic / Research Institution</option>
+            <option>Individual</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label>6. Have you used UNBS Petroleum Laboratory services before?</label>
+          <div class="option">
+            <label><input type="radio" name="used" value="yes" onclick="toggleSections()"> Yes</label>
+            <label><input type="radio" name="used" value="no" onclick="toggleSections()"> No</label>
+          </div>
+        </div>
+      </div>
+
+      <div id="usedSection" class="hidden section">
+        <h2>Section 2A: Service Feedback</h2>
+
+        <div class="question">
+          <label>7. Which UNBS Petroleum Laboratory service(s) have you used?</label>
+          <div class="option">
+            <label><input type="checkbox" name="services" value="Viscosity testing"> Viscosity testing</label>
+            <label><input type="checkbox" name="services" value="Product quality/compliance testing"> Product quality/compliance testing</label>
+            <label><input type="checkbox" name="services" value="Investigative testing"> Investigative testing</label>
+            <label><input type="checkbox" name="services" value="Other"> Other</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <label for="experience">8. How would you rate your overall experience with UNBS Petroleum Laboratory?</label>
+          <select id="experience" name="experience">
+            <option>1 - Very Poor</option>
+            <option>2 - Poor</option>
+            <option>3 - Fair</option>
+            <option>4 - Good</option>
+            <option>5 - Excellent</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label for="ttsat">9. How satisfied were you with turnaround time?</label>
+          <select id="ttsat" name="ttsat">
+            <option>Very satisfied</option>
+            <option>Satisfied</option>
+            <option>Neutral</option>
+            <option>Dissatisfied</option>
+            <option>Very dissatisfied</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label for="preferredTatUsed">10. What turnaround time would best meet your needs?</label>
+          <select id="preferredTatUsed" name="preferredTatUsed">
+            <option>Within 24 hours</option>
+            <option>Within 48 hours</option>
+            <option>Within 3 working days</option>
+            <option>Within 5 working days</option>
+            <option>More than 5 working days</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label for="improveUsed">11. What is one key improvement you recommend for UNBS Petroleum Laboratory services?</label>
+          <textarea id="improveUsed" name="improveUsed"></textarea>
+        </div>
+      </div>
+
+      <div id="notUsedSection" class="hidden section">
+        <h2>Section 2B: Industry Needs</h2>
+
+        <div class="question">
+          <label>7. Why have you not used UNBS Petroleum Laboratory services?</label>
+          <div class="option">
+            <label><input type="checkbox" name="reasons" value="Required test not available"> Required test not available</label>
+            <label><input type="checkbox" name="reasons" value="Turnaround time concerns"> Turnaround time concerns</label>
+            <label><input type="checkbox" name="reasons" value="Limited awareness of services"> Limited awareness of services</label>
+            <label><input type="checkbox" name="reasons" value="Pricing concerns"> Pricing concerns</label>
+            <label><input type="checkbox" name="reasons" value="Distance/logistics challenges"> Distance/logistics challenges</label>
+            <label><input type="checkbox" name="reasons" value="We use another laboratory"> We use another laboratory</label>
+            <label><input type="checkbox" name="reasons" value="Other"> Other</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <label>8. Were there tests you needed but could not access at UNBS?</label>
+          <div class="option">
+            <label><input type="radio" name="neededTests" value="yes"> Yes</label>
+            <label><input type="radio" name="neededTests" value="no"> No</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <label>9. Which tests are you interested in?</label>
+          <div class="option">
+            <label><input type="checkbox" name="tests" value="Sulfur content"> Sulfur content</label>
+            <label><input type="checkbox" name="tests" value="Octane/Cetane"> Octane number / Cetane index</label>
+            <label><input type="checkbox" name="tests" value="Pour point"> Pour point</label>
+            <label><input type="checkbox" name="tests" value="Cloud point"> Cloud point</label>
+            <label><input type="checkbox" name="tests" value="TAN/TBN"> TAN / TBN</label>
+            <label><input type="checkbox" name="tests" value="Metals analysis"> Metals analysis</label>
+            <label><input type="checkbox" name="tests" value="Density"> Density</label>
+            <label><input type="checkbox" name="tests" value="Flash point"> Flash point</label>
+            <label><input type="checkbox" name="tests" value="Distillation"> Distillation</label>
+            <label><input type="checkbox" name="tests" value="Water content"> Water content</label>
+            <label><input type="checkbox" name="tests" value="Fuel adulteration analysis"> Fuel adulteration analysis</label>
+            <label><input type="checkbox" name="tests" value="Used oil analysis"> Used oil analysis</label>
+            <label><input type="checkbox" name="tests" value="Other"> Other</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <label for="otherTest">10. If other, please specify</label>
+          <input type="text" id="otherTest" name="otherTest">
+        </div>
+
+        <div class="question">
+          <label for="preferredTatNotUsed">11. What turnaround time would best meet your needs?</label>
+          <select id="preferredTatNotUsed" name="preferredTatNotUsed">
+            <option>Within 24 hours</option>
+            <option>Within 48 hours</option>
+            <option>Within 3 working days</option>
+            <option>Within 5 working days</option>
+            <option>More than 5 working days</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label for="improveNotUsed">12. What is one key improvement you recommend for UNBS Petroleum Laboratory to better serve your organization?</label>
+          <textarea id="improveNotUsed" name="improveNotUsed"></textarea>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Section 3: Industry Challenges & Collaboration Input</h2>
+
+        <div class="question">
+          <label>13. What limitations or challenges do you face when seeking petroleum testing services?</label>
+          <div class="option">
+            <label><input type="checkbox" name="challenges" value="Limited availability of required tests"> Limited availability of required tests</label>
+            <label><input type="checkbox" name="challenges" value="Long turnaround time"> Long turnaround time</label>
+            <label><input type="checkbox" name="challenges" value="High testing costs"> High testing costs</label>
+            <label><input type="checkbox" name="challenges" value="Sample transport/logistics difficulties"> Sample transport/logistics difficulties</label>
+            <label><input type="checkbox" name="challenges" value="Limited information about available services"> Limited information about available services</label>
+            <label><input type="checkbox" name="challenges" value="Delays in receiving test reports"> Delays in receiving test reports</label>
+            <label><input type="checkbox" name="challenges" value="Difficulty interpreting test reports"> Difficulty interpreting test reports</label>
+            <label><input type="checkbox" name="challenges" value="Limited access to technical support"> Limited access to technical support</label>
+            <label><input type="checkbox" name="challenges" value="Regulatory or compliance uncertainties"> Regulatory or compliance uncertainties</label>
+            <label><input type="checkbox" name="challenges" value="Distance to the laboratory"> Distance to the laboratory</label>
+            <label><input type="checkbox" name="challenges" value="Other"> Other</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <label for="otherChallenge">14. If other, please specify</label>
+          <input type="text" id="otherChallenge" name="otherChallenge">
+        </div>
+
+        <div class="question">
+          <label>15. Would your organization be interested in collaborative research or shared laboratory facilities?</label>
+          <div class="option">
+            <label><input type="radio" name="collaboration" value="Yes"> Yes</label>
+            <label><input type="radio" name="collaboration" value="No"> No</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <label>16. If yes, what type of collaboration would interest you most?</label>
+          <div class="option">
+            <label><input type="checkbox" name="collabType" value="Joint testing programs"> Joint testing programs</label>
+            <label><input type="checkbox" name="collabType" value="Method development/validation"> Method development/validation</label>
+            <label><input type="checkbox" name="collabType" value="Proficiency testing/inter-laboratory comparisons"> Proficiency testing/inter-laboratory comparisons</label>
+            <label><input type="checkbox" name="collabType" value="Staff training/capacity building"> Staff training/capacity building</label>
+            <label><input type="checkbox" name="collabType" value="Shared laboratory equipment/facilities"> Shared laboratory equipment/facilities</label>
+            <label><input type="checkbox" name="collabType" value="Research and innovation projects"> Research and innovation projects</label>
+            <label><input type="checkbox" name="collabType" value="Other"> Other</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <label for="additionalComments">17. Additional comments or recommendations</label>
+          <textarea id="additionalComments" name="additionalComments"></textarea>
+        </div>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <script>
+    function toggleSections() {
+      const used = document.querySelector('input[name="used"]:checked');
+      const usedSection = document.getElementById('usedSection');
+      const notUsedSection = document.getElementById('notUsedSection');
+
+      if (!used) return;
+
+      if (used.value === 'yes') {
+        usedSection.classList.remove('hidden');
+        notUsedSection.classList.add('hidden');
+      } else {
+        notUsedSection.classList.remove('hidden');
+        usedSection.classList.add('hidden');
+      }
+    }
+  </script>
+</body>
+</html>
